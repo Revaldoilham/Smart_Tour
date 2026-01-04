@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@200..800&display=swap');
+
+:root {
+  --jogja-brown: #4a332d;
+  --jogja-gold: #c5a059;
+  --jogja-cream: #f9f5eb;
+  --jogja-green: #2d4a3e;
+}
+
+body {
+  background-color: var(--jogja-cream);
+  color: var(--jogja-brown);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-image: linear-gradient(rgba(249, 245, 235, 0.95), rgba(249, 245, 235, 0.95)), url("/assets/images/batik.png");
+  background-attachment: fixed;
+  background-size: 400px;
+}
+
+h1, h2, h3, .font-jogja {
+  font-family: 'Playfair Display', serif;
+}
+
+.batik-overlay {
+  background-image: url("https://www.transparenttextures.com/patterns/batik.png");
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #c5a059 0%, #ecd4a4 50%, #c5a059 100%);
+}
+
+.brown-glass {
+  background: rgba(74, 51, 45, 0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(74, 51, 45, 0.1);
+}
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(197, 160, 89, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0); }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes voice {
+  0% { height: 10%; }
+  50% { height: 100%; }
+  100% { height: 10% ; }
+}
+
+.soundwave-bar {
+  animation: voice 1s infinite ease-in-out;
+}
+.soundwave-bar:nth-child(2) { animation-delay: 0.2s; }
+.soundwave-bar:nth-child(3) { animation-delay: 0.4s; }
+.soundwave-bar:nth-child(4) { animation-delay: 0.6s; }
